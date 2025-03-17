@@ -207,10 +207,6 @@
                     const li = document.createElement('li');
                     li.innerHTML = `<img src="${item.imagem}" alt="${item.nome}" style="width: 50px;"/> ${item.nome}`;
 
-
-
-
-
                     const removeBtn = document.createElement('button');
                     removeBtn.textContent = 'Remover';
                     removeBtn.onclick = () => removeItem(index);
@@ -221,13 +217,13 @@
     
             function removeItem(index) {
                 cart.splice(index, 1);
-                localStorage.setItem('cart', JSON.stringify(cart));
+                localStorage.setItem('carrinho', JSON.stringify(cart));
                 renderCart();
             }
     
             function emptyCart() {
                 cart = [];
-                localStorage.setItem('cart', JSON.stringify(cart));
+                localStorage.setItem('carrinho', JSON.stringify(cart));
                 renderCart();
             }
     
